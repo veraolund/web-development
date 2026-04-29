@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vera Victoria Ölund">
+    <meta name="description" content="A digital dashboard with a to-do-list"> 
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="tasks, clock, motivation"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="resources/favicon.svg">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="nav-date"></div>
+
+            <section id="menu-section">
+                <button id="menu-button">Menu</button>
+
+                <ul id="dropdown">
+                    <li id="menu-home">Home</li>
+                    <li id="menu-settings">Settings</li>
+                    <li id="menu-help">Help</li>
+                </ul>
+            </section>
+
+            <img class="avatar current-avatar" src="resources/profile.png" alt="Generic profile icon" width="100"
+                height="100">
+        </nav>
+    </header>
+
+    <main>
+
+
+        <section id="time-widget" class="widget">
+            <img id="sleeping-cat" src="resources/sleeping-cat1.png" alt="Sleeping cat" width="100" height="100">
+            <p id="time"></p>
+            <img id="sun" src="resources/sun.png" alt="Shining orange sun" width="100" height="100">
+            <img id="moon" src="resources/moon.png" alt="Gray half moon" width="100" height="100">
+        </section>
+
+        <section id="quote-widget" class="widget">
+            <h4>Today's Quote</h4>
+            <blockquote id="quote"></blockquote>
+            <p id="author"></p>
+        </section>
+
+        <section id="count-widget" class="widget">
+            <p id="task-counter"></p>
+            <p>tasks</p>
+        </section>
+
+        <section class="widget" id="to-do-list">
+            <h1>To-Do List</h1>
+            <div id="input-container">
+                <input type="text" id="task" placeholder="New task...">
+                <button id="addTask">Add</button>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+
+        <section id="settings" class="hide">
+            <h1>Settings</h1>
+            <section>
+                <h4>Profile Avatar</h4>
+                <img class="avatar current-avatar" src="resources/profile.png" alt="Currently selectd profile action">
+                <button id="remove-avatar">Remove Avatar</button>
+                <button id="change-avatar">Change Avatar</button>
+                <section id="avatar-choices" class="hide">
+                    <img id="avatar1" class="avatar" src="resources/avatar1.png" alt="Profile avatar" width="100"
+                        height="100">
+                    <img id="avatar2" class="avatar" src="resources/avatar2.png" alt="Profile avatar" width="100"
+                        height="100">
+                    <img id="avatar3" class="avatar" src="resources/avatar3.png" alt="Profile avatar" width="100"
+                        height="100">
+                    <img id="avatar4" class="avatar" src="resources/avatar4.png" alt="Profile avatar" width="100"
+                        height="100">
+                    <img id="avatar5" class="avatar" src="resources/avatar5.png" alt="Profile avatar" width="100"
+                        height="100">
+                </section>
+            </section>
+            <section>
+                <h4>Appearance</h4>
+                <button id="vintage-button">Vintage</button>
+                <button id="modern-button">Modern</button>
+            </section>
+        </section>
+
+        <section id="help-center" class="hide">
+            <h1>Help Center</h1> <!--Write true content + USE MARK-->
+            <details>
+                <summary>About Web To-Do</summary>
+                <p>
+                    With useful widgets, functions and customization options, <i>Web To-Do</i> acts like
+                    <mark>productivity dashboard</mark> with a sprinkle of positive energy. The user can set their own
+                    preferance, a modern or a vintage look to the dashboard. Besides beaing pleasing to the eye, the
+                    user gets an <mark>overview</mark> of the current situation together with an inspirational quote to
+                    cultivate the <mark>positive outlook</mark> for the day.
+                </p>
+                <table>
+                    <caption>Web To-Do, functions and descriptions</caption>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clock</td>
+                            <td>The time is always visible</td>
+                        </tr>
+                        <tr>
+                            <td>Quote</td>
+                            <td>Get a new inspirational quote each day</td>
+                        </tr>
+                        <tr>
+                            <td>Task Counter</td>
+                            <td>Keep track of how many thigs to do</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">To-Do List</td>
+                            <td>Add tasks and save them to the list</td>
+                        </tr>
+                        <tr>
+                            <td>Check the completed tasks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <details>
+                <summary>How to use the to-do-list</summary>
+                <p>
+                    In <i>Web To-Do</i> the user can add tasks by typing in the text in the input-field and pressing the
+                    <mark>Add-button</mark>, or hitting <mark>enter</mark>. The task will be saved and displayed below
+                    the input-field. If the user wishes to delete a task, they can easily do so by <mark>double
+                        clicking</mark> the task in
+                    question. If the task is completed and the user wants to check it without deleting it, that is done
+                    by simply
+                    <mark>clicking the item once.</mark>
+                </p>
+                <a href="tutorial.html">
+                    <video autoplay muted loop width="450">
+                        <source src="resources/tutorial.mp4" type="video/mp4">
+                        Your browser does not support this video
+                    </video>
+                </a>
+            </details>
+            <details>
+                <summary>Customization</summary>
+                <p>
+                    To customize the dashboard, select the wanted <mark>look</mark>, modern or vintage. The
+                    <mark>profile avatar</mark> can also be customized. Choose one of our profile avatars that fits your
+                    liking.
+                </p>
+            </details>
+
+            <h2>Didn’t find your answer? Contact us.</h2>
+            <form method="post" enctype="multipart/form-data"
+                action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+
+                <fieldset>
+                    <legend>Your Info</legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full name" pattern="[a-zA-ZÅÄÖåäö\s'-]+"
+                        required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="number">Phone</label>
+                    <input type="tel" id="number" name="number" pattern="[0-9]{10}" required title="10 digits">
+
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" list="countries">
+                    <datalist id="countries">
+                        <option value="United States"></option>
+                        <option value="United Kingdom"></option>
+                        <option value="Canada"></option>
+                        <option value="Other"></option>
+                    </datalist>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label><input type="checkbox" name="response" value="yes"> Respond to me</label>
+                    <label><input type="radio" name="copy" value="yes" checked> Copy</label>
+                    <label><input type="radio" name="copy" value="no"> No copy</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message</legend>
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Choose topic</option>
+                        <option value="question">Question</option>
+                        <option value="problem">Problem</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Attachment</legend>
+                    <input type="file" id="file" name="file">
+                </fieldset>
+
+                <fieldset>
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Clear">
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="mailto:viol7606@student.su.se">Contact us</a>
+        <p>&#169; 2025 Web To-Do. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

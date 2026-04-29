@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+    <polygon points="35,323 200,290 200,70 35,103" fill="cornsilk" transform="translate(170, 395) scale(1, -1)" />
+    <polygon points="35,325 200,290 200,72 35,103" fill="cornsilk" />
+
+
+    <line x1="200" y1="320" x2="200" y2="90" stroke="black" stroke-width="20" />
+    <line x1="35" y1="315" x2="35" y2="88" stroke="black" stroke-width="20" />
+    <line x1="365" y1="315" x2="365" y2="88" stroke="black" stroke-width="20" />
+
+    <path d="M 30 80 C 60 60, 85 60, 115 80 S 170 100, 200 80" stroke="black" stroke-width="25" fill="none"
+        transform="translate(170, 10)" />
+    <path d="M 30 70 C 60 50, 85 50, 115 70 S 170 110, 200 70" stroke="black" stroke-width="25" fill="none"
+        transform="translate(0, 160) scale(1, -1)" />
+    <path d="M 30 80 C 60 60, 85 60, 115 80 S 170 100, 200 80" stroke="black" stroke-width="25" fill="none"
+        transform="translate(168, 230)" />
+    <path d="M 30 70 C 60 50, 85 50, 115 70 S 170 110, 200 70" stroke="black" stroke-width="25" fill="none"
+        transform="translate(0, 380) scale(1, -1)" />
+
+    <text x="225" y="150" transform="rotate(5 220 150)" font-weight="bold" font-size="20">Web To-Do</text>
+    <text x="225" y="180" transform="rotate(5 220 180)" font-weight="bold" font-size="20">Web To-Do</text>
+    <text x="225" y="210" transform="rotate(5 220 210)" font-weight="bold" font-size="20">Web To-Do</text>
+</svg>
