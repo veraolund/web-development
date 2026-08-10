@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --prm-clr: #2F2722;
+    --sec-clr: #bbb;
+    --sec-clr-txt: #448;
+    --bg-clr: #fcf7f2; 
+    --accent-clr: #1d6dc8;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(DM_Sans/static/DMSans_18pt-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "DM Serif";
+    src: url(DM_Serif_Display/DMSerifDisplay-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+/* Allmänna regler - färg, typografi, mm */
+
+body {
+    background-color: var(--bg-clr);
+    color: var(--prm-clr);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: "DM Serif", serif;
+    font-weight: 400;
+}
+
+p {
+    max-width: 75ch;
+}
+
+mark {
+    background-color: rgba(145, 189, 216, 0.5);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    color: var(--sec-clr-txt);
+    text-align: center;
+}
+
+.floating-img {
+    float: right;
+    width: clamp(100px, 20%, 250px);
+    height: auto;
+}
+
+.floating-svg {
+    float: right;
+    width: clamp(80px, 15%, 230px);
+    height: auto;
+    border: 1px solid var(--prm-clr);
+    outline: 1px solid var(--prm-clr);
+    outline-offset: 3px;
+    padding: 0.2em;
+    margin: 2em;
+}
+
+main ul, ol, dd {
+    padding-left: 1.5em;
+    min-width: 15ch;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding: 0.2em 0.2em 0.2em 0.8em;
+}
+
+dt {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.bg-area {
+    background: url(bg-mobile.png);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 1em;
+}
+
+section, aside {
+    padding: 1em 2em;
+}
+
+pre{
+    font-size: 0.4rem;
+    padding: 5em 1em 2em 1em;
+}
+
+.pizza-decor {
+    display: none;
+}
+
+blockquote {
+    margin-bottom: 0.5rem;
+}
+
+main img, video {
+    max-width: 100%;
+    padding: 1em;
+}
+
+audio {
+    margin-top: 1em;
+    border: 1.5px solid var(--sec-clr);
+    border-radius: 2em;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    text-align: left;
+}
+
+.not-centered * {
+    align-self: self-start;
+}
+
+.centered {
+    align-self: center;
+}
+
+progress {
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+}
+
+
+/* Header - stilsättning */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: 1px solid var(--prm-clr);
+    margin-bottom: 4em;
+}
+
+header ul {
+    padding: 1.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    list-style: none;
+}
+
+header a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    color: var(--prm-clr);
+    text-decoration: none;
+}
+
+header img {
+    margin: 0.2rem 2rem;
+    display: block;
+}
+
+
+/* Footer - stilsättning */
+
+footer {
+    border-top: 1px solid var(--prm-clr); 
+    padding: 1em;
+    margin-top: 4em;
+    line-height: 2;
+}
+
+footer a {
+    display: block;
+}
+
+
+/* Länkar - order: :link, :visited, :hover, :focus, :active */
+
+main a:link, footer a, .current{
+    color: var(--accent-clr);
+    text-decoration: none;
+}
+
+main a:visited {
+    color: var(--sec-clr-txt);
+}
+
+main a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+header a:hover {
+    color: var(--accent-clr);
+}
+
+a:focus, a:active{
+    outline: 1px solid var(--prm-clr); 
+    outline-offset: 3px; 
+}
+
+
+/* Tabell - stilsättning */
+
+table {
+    table-layout: auto;
+    border: 1px solid var(--sec-clr);
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid var(--sec-clr);
+    padding: 0.5em 1em;
+}
+
+th[colspan="2"] {
+    background-color: var(--sec-clr);
+}
+
+caption {
+    caption-side: bottom;
+    text-align: left;
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 0.2em;
+}
+
+
+
+/* Video - Fullskärm */
+
+.video-display {
+    width: 100%;
+}
+
+.full-screen-video {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.button {
+    font-size: 1.2rem;
+    padding: 1em;
+    border: none;
+    background-color: var(--accent-clr);
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.button:hover {
+    background-color: white;
+    color: var(--prm-clr);
+}
+
+
+/* Form - Stilsättning */
+
+form {
+    line-height: 2;
+}
+
+label {
+    display: block;
+}
+
+input[type="checkbox"], select {
+    margin-bottom: 2em;
+}
+
+label[for="yes-copy"], label[for="no-copy"]{
+    display: inline;
+    margin-right: 2em;
+}
+
+fieldset {
+    padding: 1em 2em;
+    margin-top: 1em;
+    border: 1.5px solid gray;
+    border-radius: 0.5em;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--accent-clr);
+    padding: 0 1rem;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 0.5em 1em;
+    border: 1.5px solid gray;
+    border-radius: 0.5em;
+}
+
+input {
+    padding: 0.5em 1.5em;
+    margin-bottom: 1em;
+    border: 1.5px solid gray;
+    border-radius: 0.5em;
+}
+
+textarea:focus, input:focus {
+    background-color: rgba(0, 119, 255, 0.1);
+}
+
+input[type="tel"] {
+    background-image: url(tel.png);
+    background-size: 0.9rem;
+    background-repeat: no-repeat;
+    background-position: 2% center;
+}
+
+.form-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-controls input {
+    margin: 0;
+}
+
+
+/* Responsiv design - Media Queries */
+
+/* Fixerad - Mobil mindre än 200px */
+@media (max-width: 200px) {
+    body{
+        width: 200px;
+    } 
+    
+} 
+
+/* Flödande - Platta från 500px */
+@media (min-width: 500px) {
+    header ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1em 2em;
+    }
+    
+    section, aside, .pizza-video {
+        grid-column: 1 / span 2;
+    }
+    
+    .left-side {
+        grid-column: 1 / span 1;
+        min-width: 50%;
+    }
+    
+    .right-side {
+        grid-column: 2 / span 1;
+        min-width: 50%;
+    }
+        
+    .bg-area {
+        background: url(bg-desktop.png);
+    }
+    
+}
+
+/* Flödande - Desktop från 1024px */
+@media (min-width: 1024px) {
+
+    main {
+        width: 80%;
+        margin: 0 auto;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .pizza-decor {
+        display: block;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .left-side, .pizza-video {
+        grid-column: 1 / span 6;
+    }
+    
+    .right-side, .pizza-decor {
+        grid-column: 7 / span 6;
+    }
+    
+    section, aside {
+        grid-column: 1 /span 12;
+    }
+    
+    .first-third {
+        grid-column: 1 / span 4;
+    }
+    
+    .second-third {
+        grid-column: 5 / span 4;
+    }
+    
+    .third-third {
+        grid-column: 9 / span 4;
+    }
+    
+}
+
+/* Fixerad - Desktop över 1200px */
+@media (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Skriva ut (Ctrl + P) */
+@media print {
+    header, footer, video {
+        display: none;
+    }
+}
