@@ -387,3 +387,7 @@ function setTodaysQuote() {
 }
 setTodaysQuote(); // sätta dagens citat och författare vid start
 
+// dynamiskt visa nuvarande årtal
+document.querySelectorAll(".current-year").forEach((element) => {
+    element.textContent = new Date().getFullYear();
+});
